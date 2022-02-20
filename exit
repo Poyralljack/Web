@@ -1,0 +1,103 @@
+[33mcommit 8f6ffab279cdeeeca34983d7a33b53bc6969749d[m[33m ([m[1;36mHEAD -> [m[1;32mtext[m[33m)[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Sun Feb 20 18:11:49 2022 +0300
+
+    text branch
+
+[33mcommit 1807008df9b723c49a002627188a63b7a137e16a[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Sun Feb 20 17:53:33 2022 +0300
+
+    Gitignore add
+
+[33mcommit 08e08e975a5dfd3e483f983ad55001656c3f2581[m
+Merge: 688c3ec 51f836a
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Sun Feb 20 16:25:59 2022 +0300
+
+    .
+
+[33mcommit 688c3ec71ba775f6a26b4bd6be7f431ece9f3678[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Sun Feb 20 16:24:08 2022 +0300
+
+    Adding heroku
+
+[33mcommit 51f836a1236ba353789fd451b88144533f2bd56c[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Sun Feb 20 16:05:45 2022 +0300
+
+    Adding heroku
+
+[33mcommit d68f2f44e3c21c709a3e21366f415a86619f26dd[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Sat Feb 19 18:57:39 2022 +0300
+
+    adding city in weather
+
+[33mcommit 6ad56c27b11de456c0d63d69192505e4f577136d[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Sat Feb 19 17:21:49 2022 +0300
+
+    Weather api usage
+
+[33mcommit a9f8b9ac86365517f4f702da9283d7b55313a8fc[m
+Merge: 8bbaaf4 61b4de8
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Fri Feb 18 19:05:28 2022 +0300
+
+    Merge branch 'main' of https://github.com/Poyralljack/Web
+
+[33mcommit 8bbaaf418d23d47a5a0b730c68ac50e785f301ce[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Fri Feb 18 18:59:50 2022 +0300
+
+    expressjs and calculator
+
+[33mcommit 61b4de855bbb257012f7d8f4b220725d11e0c9cd[m
+Author: Yasin Herken <57527891+Poyralljack@users.noreply.github.com>
+Date:   Thu Feb 17 17:07:02 2022 +0300
+
+    Delete Portfolio from public
+
+[33mcommit 4c22cdb5323c7f40f9e8c105a22883e67626bbf3[m
+Author: Yasin Herken <57527891+Poyralljack@users.noreply.github.com>
+Date:   Thu Feb 17 16:55:28 2022 +0300
+
+    My Portfolio
+
+[33mcommit 0183143eefd0002c5edae76892ad8007209364e6[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Wed Feb 16 19:15:01 2022 +0300
+
+    Adding game
+
+[33mcommit 841cbcf86c567f4aa8d852eb93bafe0607a67f1e[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Wed Feb 16 14:16:02 2022 +0300
+
+    Drum Kit
+
+[33mcommit 7f528dc991a1d4a62d7c1e024776f424e5204825[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Tue Feb 15 21:07:05 2022 +0300
+
+    File name changing
+
+[33mcommit 36586958b6851a184e27783832b4f29a0275f113[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Tue Feb 15 21:01:26 2022 +0300
+
+    Dicee Game
+
+[33mcommit 575b42aaf54415044efde2e98ab783036076a635[m
+Author: Yasin Herken <yasin.herken123@gmail.com>
+Date:   Tue Feb 15 19:06:25 2022 +0300
+
+    Tindog Website
+
+[33mcommit f086f9db79628b001d74e7d7bbadfe99ffaab6cc[m
+Author: Yasin Herken <57527891+Poyralljack@users.noreply.github.com>
+Date:   Mon Feb 7 16:15:19 2022 +0300
+
+    Initial commit
