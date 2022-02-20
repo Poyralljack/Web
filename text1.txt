@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-text3.txt
-=======
-text2.txt
->>>>>>> text
