@@ -6,6 +6,8 @@ const date=require(__dirname+"/date.js");
 
 const mongoose=require('mongoose');
 
+const _=require('lodash');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -33,6 +35,13 @@ const item3=new Item({
 })
 const defaultItems=[item1,item2,item3];
 
+const listSchema={
+    name:String,
+    items:[itemsSchema]
+};
+
+const List=mongoose.model("List",listSchema);
+
 app.get("/",function(req,res){
 
     
@@ -57,34 +66,60 @@ app.get("/",function(req,res){
 app.post("/",function(req,res){
     const itemName =req.body.newItem;
 
+    const listName=req.body.list;
     const item=new Item({name:itemName});
 
-    item.save(function(err){
-        if(err){
+    if(listName=="Today"){
+        item.save();
         res.redirect("/");
-        }else{
-        console.log("Saved item");
-        }
+    }else{
+        List.findOne({name:listName},function(err,results){
+            results.items.push(item);
+            results.save();
+            
         });
-        res.redirect("/");
-})
+        res.redirect("/"+listName);
+    }
+        
+});
 app.post("/delete",function(req,res){
    const checkedItemID=req.body.checkbox;
+   const listName=req.body.listName;
 
-   Item.findByIdAndRemove(checkedItemID,function(err){
-        if(err)
-            console.log(err);
-        else{
-            console.log("Succesfully deleted");
+   if(listName=="Today"){
+    Item.findByIdAndRemove(checkedItemID,function(err){
+        if(!err){
+            console.log("Successfully deleted checked item.");
+            res.redirect("/");
         }
-   })
-   res.redirect("/");
-})
-app.get("/work",function(req,res){
-    res.render("list",{
-    listTitle:"Work List",
-    newListItems:workItems
-    });
+   });
+   }else{
+       List.findOneAndUpdate({name:listName},{$pull:{items:{_id:checkedItemID}}},function(err,foundList){
+           if(!err){
+               res.redirect("/"+listName);
+           }
+       });
+   }
+   
+});
+app.get("/:customListName",function(req,res){
+    const customListName=_.capitalize(req.params.customListName);
+
+    List.findOne({name:customListName},function(err,results){
+        if(!err){
+            if(!results){
+                //create a new list
+                const list=new List({
+                name:customListName,
+                items:defaultItems
+                });
+            list.save();
+            res.redirect("/"+customListName);
+        }else{
+                res.render("list",{listTitle: results.name,newListItems:results.items});
+        }
+    }     
+});
 });
 app.post("/work",function(req,res){
     let item=req.body.newItem;
