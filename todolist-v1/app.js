@@ -8,6 +8,8 @@ const mongoose=require('mongoose');
 
 const _=require('lodash');
 
+var config = require(__dirname+'/config/default.json');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -16,7 +18,10 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static('public'))
 
-mongoose.connect("mongodb://localhost:27017/todolistDB",{useNewUrlParser:true});
+const password =config.password;
+
+const uri = "mongodb+srv://admin-Yasin:"+password+"@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+mongoose.connect(uri+"/todolistDB",{useNewUrlParser:true});
 
 const itemsSchema={
     name:String
