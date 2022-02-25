@@ -18,7 +18,7 @@ app.use(express.static('public'))
 
 const password ="Test123";
 
-const uri = "mongodb+srv://admin-Yasin:"+password+"@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+const uri = "mongodb+srv://admin-Yasin:Test123@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(uri+"/todolistDB",{useNewUrlParser:true});
 
 const itemsSchema={
@@ -105,7 +105,7 @@ app.post("/delete",function(req,res){
    }
    
 });
-app.get("/:customListName",function(req,res){
+app.get("/list/:customListName",function(req,res){
     const customListName=_.capitalize(req.params.customListName);
 
     List.findOne({name:customListName},function(err,results){
