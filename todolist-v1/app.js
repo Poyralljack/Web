@@ -8,8 +8,6 @@ const mongoose=require('mongoose');
 
 const _=require('lodash');
 
-var config = require(__dirname+'/config/default.json');
-
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -18,7 +16,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static('public'))
 
-const password =config.password;
+const password ="Test123";
 
 const uri = "mongodb+srv://admin-Yasin:"+password+"@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 mongoose.connect(uri+"/todolistDB",{useNewUrlParser:true});
@@ -131,7 +129,12 @@ app.post("/work",function(req,res){
     workItems.push(item);
     res.redirect("/work");
 })
-app.listen(3000,function(){
+let port=process.env.PORT;
+if(port==null || port=="")
+{
+    port=3000;
+}
+app.listen(port,function(){
     console.log("Server started on port 3000");
     
 })
