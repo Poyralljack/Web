@@ -16,10 +16,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static('public'))
 
-const password ="Test123";
-
-const uri = "mongodb+srv://admin-Yasin:Test123@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-mongoose.connect(uri+"/todolistDB",{useNewUrlParser:true});
+const uri = "mongodb+srv://admin-Yasin:Test123@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majoritymongodb+srv://admin-Yasin:Test123@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+mongoose.connect("mongodb+srv://admin-Yasin:Test123@cluster0.iq2bu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority/todolistDB",{useNewUrlParser:true});
 
 const itemsSchema={
     name:String
@@ -134,7 +132,8 @@ if(port==null || port=="")
 {
     port=3000;
 }
+console.log(port);
 app.listen(port,function(){
-    console.log("Server started on port 3000");
+    console.log("Server started on port"+port);
     
 })
